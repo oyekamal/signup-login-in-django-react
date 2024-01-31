@@ -1,9 +1,14 @@
 import React from "react";
 import { Breadcrumb, Layout, theme } from "antd";
+import { ReactNode } from "react";
 
 const { Content } = Layout;
 
-const ContentBar: React.FC = () => {
+interface Props {
+  children: ReactNode;
+}
+
+const ContentBar: React.FC = ({ children }: Props) => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -23,7 +28,7 @@ const ContentBar: React.FC = () => {
           borderRadius: borderRadiusLG,
         }}
       >
-        Content
+        {children}
       </div>
     </Content>
   );
