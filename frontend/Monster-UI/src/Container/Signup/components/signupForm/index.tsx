@@ -11,6 +11,7 @@ const onFinishFailed = (errorInfo: any) => {
 
 type FieldType = {
   username?: string;
+  email?: string;
   password1?: string;
   password2?: string;
   remember?: string;
@@ -31,6 +32,14 @@ const SignupForm: React.FC = () => (
       label="Username"
       name="username"
       rules={[{ required: true, message: "Please input your username!" }]}
+    >
+      <Input />
+    </Form.Item>
+
+    <Form.Item<FieldType>
+      label="Email"
+      name="email"
+      rules={[{ required: true, message: "Please input your email!" }]}
     >
       <Input />
     </Form.Item>
