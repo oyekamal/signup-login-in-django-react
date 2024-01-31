@@ -4,7 +4,6 @@ function Signup() {
   return (
     <ContentBar>
       <h1>Sign UP</h1>
-
       <SignupForm />
     </ContentBar>
   );
