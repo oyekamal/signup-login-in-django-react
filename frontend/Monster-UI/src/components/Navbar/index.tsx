@@ -25,7 +25,10 @@ const Navbar: React.FC = () => {
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={["2"]}
-        items={items}
+        items={[
+          { key: 1, label: `Sign up` },
+          { key: 2, label: `Login` },
+        ]}
         style={{ flex: 1, minWidth: 0 }}
       />
     </Header>

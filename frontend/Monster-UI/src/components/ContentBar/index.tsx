@@ -6,9 +6,10 @@ const { Content } = Layout;
 
 interface Props {
   children: ReactNode;
+  page?: string;
 }
 
-const ContentBar: React.FC = ({ children }: Props) => {
+const ContentBar: React.FC = ({ children, page = "page" }: Props) => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -17,8 +18,7 @@ const ContentBar: React.FC = ({ children }: Props) => {
     <Content style={{ padding: "0 48px" }}>
       <Breadcrumb style={{ margin: "16px 0" }}>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
-        <Breadcrumb.Item>List</Breadcrumb.Item>
-        <Breadcrumb.Item>ContentBar</Breadcrumb.Item>
+        <Breadcrumb.Item>{page}</Breadcrumb.Item>
       </Breadcrumb>
       <div
         style={{

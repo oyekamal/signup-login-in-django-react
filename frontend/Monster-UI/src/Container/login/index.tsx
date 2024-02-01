@@ -3,7 +3,7 @@ import LoginForm from "./components/loginform";
 import ContentBar from "../../components/ContentBar";
 function Login() {
   return (
-    <ContentBar>
+    <ContentBar page="Login">
       <h1>Login</h1>
       <LoginForm />
     </ContentBar>
