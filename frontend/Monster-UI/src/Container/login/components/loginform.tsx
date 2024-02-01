@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
 import { useSelector, useDispatch } from "react-redux";
-import { login } from "../../AppManager/slice";
+import { login } from "../../../redux/slice";
 // const dispatch = useDispatch();
 
 const LoginForm: React.FC = () => {
